@@ -1,5 +1,3 @@
-# Wifi_Finder
-
 Wi-Find Design Project - README 
 ===
 
@@ -45,7 +43,6 @@ This is a Wifi finder app, which allows user to find wifi signals that are joina
 
 * Map Screen
    * Google Geolocation API
-   * 
 
 ### 3. Navigation
 
@@ -70,4 +67,45 @@ This is a Wifi finder app, which allows user to find wifi signals that are joina
 
 ### [BONUS] Interactive Prototype
 ![](https://media0.giphy.com/media/FC9e5yXXAuJ3SXwJE6/giphy.gif?cid=790b76118bc289eee9177be604f809bea360cc2e7fe73be1&rid=giphy.gif&ct=g)
+
+
+**Schema**
+
+---
+**Models**
+
+Post
+
+
+| Property | Type     | Description |
+| -------- | -------- | ----------- |
+| location    | String   | location of the wifi point       |
+| Wifi signal strength  | Number   | the strength of the wifi in integer form         |
+    
+
+**Networking**
+
+List of network requests by screen
+
+* Display Screen
+  (Read/Get) Query all wifi points
+```
+let query = PFQuery(className:"Post")
+# query.whereKey("user", equalTo: currentUser)
+query.order(byDescending: "location")
+query.findObjectsInBackground { 
+(posts: [PFObject]?, error: Error?) in
+   if let error = error { 
+      print(error.localizedDescription)
+   } 
+   else if let wifiPoint = wifiPoint {
+      print("Successfully retrieved \(wifiPoint.count)wifiPoint.")
+      // TODO: Do something with wifi points...
+    }
+}
+```
+
+* Map Screen
+  (Read/Get) Query all wifi points
+
 
