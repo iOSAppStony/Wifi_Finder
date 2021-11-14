@@ -27,16 +27,18 @@ This is a Wifi finder app, which allows user to find wifi signals that are joina
 
 **Required Must-have Stories**
 
-* User can find wifi locations within a 10 mile radius via map
-* User can find wifi locations via table view and search
+- [ ] User can find wifi locations within a 10 mile radius via map
+- [x] User sees a styled launch screen when they open the app.
+- [ ] User can find wifi locations via table view and search
+- [x] Search bar is visible to user
 
 
 
 **Optional Nice-to-have Stories**
 
-* User can save wifi spots they've conncected to and rate their experience.
-* User can see the strength of the nearby wifi signals
-* User will be given a message saying they have connected to this wifi before if they connect to it again for the second time or so forth. This way they will know if they still want to connect to it based on their previous experience. 
+- [ ] User can save wifi spots they've conncected to and rate their experience.
+- [ ] User can see the strength of the nearby wifi signals
+- [ ] User will be given a message saying they have connected to this wifi before if they connect to it again for the second time or so forth. This way they will know if they still want to connect to it based on their previous experience. 
 
 ### 2. Screen Archetypes
 
@@ -107,5 +109,3 @@ query.findObjectsInBackground {
 
 * Map Screen
   (Read/Get) Query all wifi points
-
-
