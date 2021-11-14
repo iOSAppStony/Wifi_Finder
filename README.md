@@ -109,3 +109,9 @@ query.findObjectsInBackground {
 
 * Map Screen
   (Read/Get) Query all wifi points
+
+
+* Build Progress 11/14/2021
+
+
+![](https://i.imgur.com/QHIFYEA.gif)
